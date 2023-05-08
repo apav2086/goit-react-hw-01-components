@@ -1,4 +1,5 @@
 import s from './style.module.css';
+import PropTypes from "prop-types";
 export default function Statistics(props) {
     console.log(props);
     return (
@@ -14,4 +15,9 @@ export default function Statistics(props) {
                 </ul>
         </div>
     );
+}
+Statistics.propTypes = {
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+percentage:PropTypes.number.isRequired,
 }

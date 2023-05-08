@@ -1,4 +1,5 @@
 import s from './style.module.css';
+import PropTypes from "prop-types";
 export default function TransactionHistory(props) {
     console.log(props.items);
     return (
@@ -25,4 +26,10 @@ export default function TransactionHistory(props) {
 </table>
         </div>
     );
+}
+TransactionHistory.propTypes = {
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
 }

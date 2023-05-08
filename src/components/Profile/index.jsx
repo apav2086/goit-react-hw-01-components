@@ -1,5 +1,5 @@
 import s from './style.module.css';
-
+import PropTypes from "prop-types";
 export default function Profile(props) {
   console.log(props);
 
@@ -32,4 +32,11 @@ export default function Profile(props) {
     </ul> 
 </div>
     );
+}
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+stats:PropTypes.objectOf(PropTypes.number.isRequired),
 }
